@@ -1,1 +1,2 @@
-There's always 💰 in the 🍌 stand
+🍞🥜🍞
+Example of a Higher-Order Component.

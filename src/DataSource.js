@@ -1,11 +1,12 @@
-class Money {
+class DataSource {
 	constructor() {
 		this.contents = {
-			money: "💰",
-			banana: "🍌"
+			peanutbutter: "🥜"
 		};
 
 		this._listeners = [];
+
+        this.addPeanutButter = this.addPeanutButter.bind(this);
 	}
 
 	addChangeListener(listener) {
@@ -23,26 +24,16 @@ class Money {
 		});
 	}
 
-	getMoney() {
-		return this.contents.money;
+	getPeanutButter() {
+		return this.contents.peanutbutter;
 	}
 
-	addMoney() {
-		this.contents.money += "💰";
+	addPeanutButter() {
+		this.contents.peanutbutter += "🥜";
 
 		// Tell the listeners that something changed
 		this.didChange();
 	}
-
-    getBanana() {
-        return this.contents.banana;
-    }
-
-    addBanana() {
-        this.contents.banana += "🍌";
-
-        this.didChange();
-    }
 }
 
-export default new Money();
+export default new DataSource();
